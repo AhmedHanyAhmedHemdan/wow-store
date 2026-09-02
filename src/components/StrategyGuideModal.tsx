@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X, Sparkles, Target, Layers, FileText, CheckCircle2, ArrowRight, ExternalLink } from 'lucide-react';
 import { CRO_STRATEGY_GUIDE } from '../data/landingData';
+import { WowStoreLogo } from './WowStoreLogo';
 
 interface StrategyGuideModalProps {
   isOpen: boolean;
@@ -24,17 +25,22 @@ export const StrategyGuideModal: React.FC<StrategyGuideModalProps> = ({ isOpen, 
           <X className="w-5 h-5" />
         </button>
 
-        <div className="mb-6">
-          <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 px-3 py-1 rounded-full text-amber-400 text-xs font-bold mb-2">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>خطة التوجيه الاستراتيجي والتحويل (CRO & Copywriting Masterplan)</span>
+        <div className="mb-6 flex items-start justify-between gap-4">
+          <div>
+            <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 px-3 py-1 rounded-full text-amber-400 text-xs font-bold mb-2">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>خطة التوجيه الاستراتيجي والتحويل (CRO & Copywriting Masterplan)</span>
+            </div>
+            <h3 className="text-xl sm:text-2xl font-black text-white">
+              الهيكل البيعي والنصوص الإعلانية المكتوبة لمتجر Wow Store
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-300 mt-1">
+              دليل تفصيلي بقسم بقسم، النصوص الموجهة للسوق العراقي، توجيهات التصميم، وتوصيات أزرار الدعوة لاتخاذ إجراء (CTAs).
+            </p>
           </div>
-          <h3 className="text-xl sm:text-2xl font-black text-white">
-            الهيكل البيعي والنصوص الإعلانية المكتوبة لمتجر Wow Store
-          </h3>
-          <p className="text-xs sm:text-sm text-slate-300 mt-1">
-            دليل تفصيلي بقسم بقسم، النصوص الموجهة للسوق العراقي، توجيهات التصميم، وتوصيات أزرار الدعوة لاتخاذ إجراء (CTAs).
-          </p>
+          <div className="shrink-0 hidden sm:block">
+            <WowStoreLogo size={48} />
+          </div>
         </div>
 
         <div className="space-y-6">
