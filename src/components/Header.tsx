@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ShieldCheck, Truck, Clock, Sparkles, MessageCircle, ShoppingBag, ArrowDown } from 'lucide-react';
 import { STORE_INFO, PRODUCTS } from '../data/landingData';
+import { WowStoreLogo } from './WowStoreLogo';
 
 interface HeaderProps {
   onOpenOrderModal: (productId?: string) => void;
@@ -68,14 +69,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenOrderModal, onOpenStrategy
           {/* Logo & Brand Identity */}
           <div className="flex items-center gap-3">
             <a href="#" className="flex items-center gap-2.5 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-300 p-0.5 shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
-                <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center font-black text-amber-400 text-lg">
-                  W
-                </div>
-              </div>
+              <WowStoreLogo size={46} />
               <div className="flex flex-col text-right">
                 <div className="flex items-center gap-1.5">
-                  <span className="text-xl font-black text-white tracking-wide">WOW STORE</span>
+                  <span className="text-xl font-black text-white tracking-wide group-hover:text-amber-400 transition-colors">WOW STORE</span>
                   <span className="text-xs bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-1.5 py-0.5 rounded font-bold">عراق 🇮🇶</span>
                 </div>
                 <span className="text-[11px] text-slate-400 font-medium">واو ستور — الجودة والضمان الحقيقي</span>
