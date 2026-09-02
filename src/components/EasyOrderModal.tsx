@@ -12,6 +12,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import { PRODUCTS, IRAQI_PROVINCES, STORE_INFO } from '../data/landingData';
+import { WowStoreLogo } from './WowStoreLogo';
 
 interface EasyOrderModalProps {
   isOpen: boolean;
@@ -114,6 +115,9 @@ export const EasyOrderModal: React.FC<EasyOrderModalProps> = ({
         {isSubmitted ? (
           /* Success Screen */
           <div className="text-center py-8">
+            <div className="flex justify-center mb-3">
+              <WowStoreLogo size={56} />
+            </div>
             <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-4 border border-emerald-500/30">
               <CheckCircle2 className="w-10 h-10" />
             </div>
@@ -179,17 +183,22 @@ export const EasyOrderModal: React.FC<EasyOrderModalProps> = ({
         ) : (
           /* Form Screen */
           <div>
-            <div className="mb-6">
-              <div className="inline-flex items-center gap-1.5 bg-amber-500/10 text-amber-400 text-xs font-bold px-2.5 py-1 rounded-lg border border-amber-500/20 mb-2">
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>استمارة EasyOrder للطلب السريع والدفع عند الاستلام</span>
+            <div className="mb-6 flex items-start justify-between gap-3">
+              <div>
+                <div className="inline-flex items-center gap-1.5 bg-amber-500/10 text-amber-400 text-xs font-bold px-2.5 py-1 rounded-lg border border-amber-500/20 mb-2">
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span>استمارة EasyOrder للطلب السريع والدفع عند الاستلام</span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-black text-white">
+                  تأكيد طلبك مع واو ستور 🇮🇶
+                </h3>
+                <p className="text-xs text-slate-400 mt-1">
+                  ادخل معلوماتك البسيطة لتأكيد الحجز، ولن تدفع أي دينار إلا بعد استلام وفحص المنتج.
+                </p>
               </div>
-              <h3 className="text-xl sm:text-2xl font-black text-white">
-                تأكيد طلبك مع واو ستور 🇮🇶
-              </h3>
-              <p className="text-xs text-slate-400 mt-1">
-                ادخل معلوماتك البسيطة لتأكيد الحجز، ولن تدفع أي دينار إلا بعد استلام وفحص المنتج.
-              </p>
+              <div className="hidden sm:block shrink-0">
+                <WowStoreLogo size={52} />
+              </div>
             </div>
 
             <form onSubmit={validateAndSubmit} className="space-y-4">
