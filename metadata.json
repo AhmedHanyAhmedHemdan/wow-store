@@ -1,0 +1,7 @@
+{
+  "name": "Wow Store - واو ستور",
+  "description": "الصفحة البيعية الاحترافية عالية التحويل لمتجر واو ستور العراقي - منتجات مميزة بأفضل سعر وتوصيل لكافة المحافظات والدفع عند الاستلام",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
