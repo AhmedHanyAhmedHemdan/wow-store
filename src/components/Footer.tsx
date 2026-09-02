@@ -1,6 +1,7 @@
 import React from 'react';
 import { ShieldCheck, Truck, Clock, Sparkles, MessageCircle, Phone, ArrowUp } from 'lucide-react';
 import { STORE_INFO, PRODUCTS } from '../data/landingData';
+import { WowStoreLogo } from './WowStoreLogo';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -15,13 +16,12 @@ export const Footer: React.FC = () => {
           
           {/* Brand Info */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-amber-500 to-amber-300 p-0.5 shadow-md">
-                <div className="w-full h-full bg-slate-950 rounded-[6px] flex items-center justify-center font-black text-amber-400 text-sm">
-                  W
-                </div>
+            <div className="flex items-center gap-3 mb-3">
+              <WowStoreLogo size={42} />
+              <div className="flex flex-col">
+                <span className="text-lg font-black text-white">WOW STORE | واو ستور العراق</span>
+                <span className="text-[11px] text-amber-400 font-bold">المتجر العراقي المعتمد للتسوق الآمن</span>
               </div>
-              <span className="text-lg font-black text-white">WOW STORE | واو ستور العراق</span>
             </div>
 
             <p className="text-slate-300 text-xs leading-relaxed max-w-md mb-4 font-medium">
