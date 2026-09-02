@@ -1,6 +1,7 @@
 import React from 'react';
 import { ShieldCheck, Truck, Sparkles, CheckCircle2, Star, ArrowDown, Eye, Zap, Flame } from 'lucide-react';
 import { PRODUCTS, STORE_INFO } from '../data/landingData';
+import { WowStoreLogo } from './WowStoreLogo';
 
 interface HeroSectionProps {
   onSelectProduct: (productId: string) => void;
@@ -25,9 +26,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectProduct }) => 
         
         {/* Top Trust Eyebrow */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
-          <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 px-3.5 py-1.5 rounded-full text-amber-300 text-xs md:text-sm font-bold shadow-inner">
+          <div className="inline-flex items-center gap-2.5 bg-slate-900/90 border border-amber-500/40 px-4 py-1.5 rounded-full text-amber-300 text-xs md:text-sm font-bold shadow-lg shadow-amber-500/5">
+            <WowStoreLogo size={24} />
             <Flame className="w-4 h-4 text-amber-400 animate-bounce" />
-            <span>عروض حصرية لفترة محدودة — متجر واو ستور الرسمي في العراق</span>
+            <span>عروض حصرية لفترة محدودة — متجر واو ستور الرسمي في العراق 🇮🇶</span>
           </div>
         </div>
 
